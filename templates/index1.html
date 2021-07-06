@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PREDICTION</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body style="background-color:grey;">
+  <center>
+    <h1 class="p-3 mb-2 bg-warning text-dark" style="font-family:Comic Sans MS,Lucida Handwriting,Brush Script MT;padding:10px;">Price Prediction for Travel</h1>
+    <form name="form" action="{{ url_for('predict')}}" method="POST" style="width:60%;margin:50px 20px">
+      <div class="input-group mb-3">
+        <label class="input-group-text bg-warning text-dark">Cab_type</label>
+        <select name="cab_type" class="form-select">
+          <option name="cab_type" selected>Choose...</option>
+          <option name="cab_type" value="0">Lyft</option>
+          <option name="cab_type" value="1">Uber</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <label class="input-group-text bg-warning text-dark">Service_type</label>
+        <select name="name" class="form-select">
+          <option name="name" selected>Choose...</option>
+          <option name="name" value="0">Black</option>
+          <option name="name" value="1">Black Suv</option>
+          <option name="name" value="2">Lux</option>
+          <option name="name" value="3">Lux Black</option>
+          <option name="name" value="4">Lux Black XL</option>
+          <option name="name" value="5">Lyft</option>
+          <option name="name" value="6">Lyft XL</option>
+          <option name="name" value="7">Shared</option>
+          <option name="name" value="8">Taxi</option>
+          <option name="name" value="9">UberPool</option>
+          <option name="name" value="10">UberX</option>
+          <option name="name" value="11">UberXL</option>
+          <option name="name" value="12">WAV</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <label class="input-group-text bg-warning text-dark">Product Id</label>
+        <select name="product_id" class="form-select">
+          <option name="product_id" selected>Choose...</option>
+          <option name="product_id" value="0">55c66225-fbe7-4fd5-9072-eab1ece5e23e</option>
+          <option name="product_id" value="1">6c84fd89-3f11-4782-9b50-97c468b19529</option>
+          <option name="product_id" value="2">6d318bcc-22a3-4af6-bddd-b409bfce1546</option>
+          <option name="product_id" value="3">6f72dfc5-27f1-42e8-84db-ccc7a75f6969</option>
+          <option name="product_id" value="4">8cf7e821-f0d3-49c6-8eba-e679c0ebcf6a</option>
+          <option name="product_id" value="5">997acbb5-e102-41e1-b155-9df7de0a73f2</option>
+          <option name="product_id" value="6">9a0e7b09-b92b-4c41-9779-2ad22b4d779d</option>
+          <option name="product_id" value="7">lyft</option>
+          <option name="product_id" value="8">lyft_line</option>
+          <option name="product_id" value="9">lyft_lux</option>
+          <option name="product_id" value="10">lyft_luxsuv</option>
+          <option name="product_id" value="11">lyft_plus</option>
+          <option name="product_id" value="12">lyft_premier</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <label class="input-group-text bg-warning text-dark">Source</label>
+        <select name="source" class="form-select">
+          <option name="source" selected>Choose...</option>
+          <option name="source" value="0">Black Bay</option>
+          <option name="source" value="1">Beacon Hill</option>
+          <option name="source" value="2">Boston University</option>
+          <option name="source" value="3">Fenway</option>
+          <option name="source" value="4">Financial District</option>
+          <option name="source" value="5">Haymarket Square</option>
+          <option name="source" value="6">North EndL</option>
+          <option name="source" value="7">North Station</option>
+          <option name="source" value="8">Northeastern University</option>
+          <option name="source" value="9">South Station</option>
+          <option name="source" value="10">Theatre District</option>
+          <option name="source" value="11">West End</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <label class="input-group-text bg-warning text-dark">Destination</label>
+        <select name="destination" class="form-select">
+          <option name="destination" selected>Choose...</option>
+          <option name="destination" value="0">Black Bay</option>
+          <option name="destination" value="1">Beacon Hill</option>
+          <option name="destination" value="2">Boston University</option>
+          <option name="destination" value="3">Fenway</option>
+          <option name="destination" value="4">Financial District</option>
+          <option name="destination" value="5">Haymarket Square</option>
+          <option name="destination" value="6">North End</option>
+          <option name="destination" value="7">North Station</option>
+          <option name="destination" value="8">Northeastern University</option>
+          <option name="destination" value="9">South Station</option>
+          <option name="destination" value="10">Theatre District</option>
+          <option name="destination" value="11">West End</option>
+        </select>
+      </div>
+      <button type="Submit"  class="btn btn-warning" style="width:30%;">Predict</button>
+    </form>
+  </center>
+  </body>
+</html>
